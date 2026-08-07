@@ -1,0 +1,2896 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Técnica Energia Solar | Usinas solares para residências, empresas e agronegócio
+    </title>
+    <meta
+      name="description"
+      content="Venda, instalação e manutenção de usinas solares fotovoltaicas. Simule sua economia em 30 segundos e receba um orçamento sem custo."
+    />
+    <meta name="theme-color" content="#0A2540" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* TOKENS */
+      :root {
+        --noite: #0a2540;
+        --noite-2: #0d3157;
+        --noite-3: #091a30;
+        --azul: #14508f;
+        --azul-eletrico: #2f86d8;
+        --azul-neve: #e6f0fa;
+        --laranja: #f26b21;
+        --laranja-escuro: #d4550f;
+        --ambar: #ffc01e;
+        --branco: #ffffff;
+        --gelo: #f4f7fa;
+        --tinta: #0a2540;
+        --cinza: #5a6b7e;
+        --cinza-claro: #a9b7c8;
+        --linha: #dfe4ea;
+
+        --display: "Archivo", system-ui, sans-serif;
+        --corpo: "Barlow", system-ui, sans-serif;
+
+        --r-sm: 9px;
+        --r-md: 14px;
+        --r-lg: 20px;
+        --sombra: 0 30px 60px -25px rgba(10, 37, 64, 0.45);
+
+      }
+
+      /* BASE */
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 88px;
+      }
+      body {
+        margin: 0;
+        background: var(--branco);
+        color: var(--tinta);
+        font-family: var(--corpo);
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--display);
+        margin: 0;
+        line-height: 1.04;
+        letter-spacing: -0.02em;
+      }
+      h1 {
+        font-size: clamp(2.05rem, 4.2vw, 3.35rem);
+        font-weight: 900;
+      }
+      h2 {
+        font-size: clamp(1.85rem, 3.5vw, 2.85rem);
+        font-weight: 800;
+      }
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      p {
+        margin: 0 0 1rem;
+      }
+      h1 + p,
+      h2 + p,
+      h3 + p {
+        margin-top: 16px;
+      }
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 3px solid var(--ambar);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .wrap {
+        width: min(1240px, 92vw);
+        margin-inline: auto;
+      }
+      .sec {
+        padding: clamp(64px, 8vw, 116px) 0;
+      }
+      .rotulo {
+        font-family: var(--display);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--azul);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      .rotulo::before {
+        content: "";
+        width: 34px;
+        height: 2px;
+        background: var(--laranja);
+        flex: none;
+      }
+      .rotulo.claro {
+        color: var(--ambar);
+      }
+      .lead {
+        font-size: 1.08rem;
+        color: var(--cinza);
+        max-width: 62ch;
+      }
+      .escuro .lead {
+        color: #b6c4d4;
+      }
+
+      /* BOTÕES */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 15px 28px;
+        border-radius: 11px;
+        border: 1.5px solid transparent;
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+          transform 0.18s ease,
+          background 0.18s ease,
+          color 0.18s ease;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn-laranja {
+        background: var(--laranja);
+        color: #fff;
+      }
+      .btn-laranja:hover {
+        background: var(--laranja-escuro);
+      }
+      .btn-azul {
+        background: var(--azul);
+        color: #fff;
+      }
+      .btn-azul:hover {
+        background: #0f3f75;
+      }
+      .btn-linha {
+        border-color: rgba(255, 255, 255, 0.35);
+        color: #fff;
+      }
+      .btn-linha:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .btn-bloco {
+        width: 100%;
+      }
+
+      /* CABEÇALHO */
+      .topo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 60;
+        transition:
+          background 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .topo.fixo {
+        position: fixed;
+        background: rgba(10, 37, 64, 0.94);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 10px 30px -18px rgba(10, 37, 64, 0.9);
+        animation: descer 0.35s ease;
+      }
+      @keyframes descer {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: none;
+        }
+      }
+      .topo-in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 20px 0;
+      }
+      .topo.fixo .topo-in {
+        padding: 12px 0;
+      }
+      .marca img {
+        height: 62px;
+        width: auto;
+        transition: height 0.3s ease;
+      }
+      .topo.fixo .marca img {
+        height: 46px;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+      .menu a {
+        font-size: 0.96rem;
+        text-decoration: none;
+        color: #dbe4ef;
+        font-weight: 600;
+      }
+      .menu a:hover {
+        color: var(--ambar);
+      }
+      .topo .btn {
+        padding: 12px 22px;
+        font-size: 0.9rem;
+        border-radius: 10px;
+      }
+      .abrir-menu {
+        display: none;
+        background: none;
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+        border-radius: 9px;
+        padding: 9px 11px;
+        cursor: pointer;
+      }
+      .abrir-menu span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        margin: 4px 0;
+      }
+      @media (max-width: 1040px) {
+        .menu,
+        .topo .btn {
+          display: none;
+        }
+        .abrir-menu {
+          display: block;
+        }
+        .marca img {
+          height: 50px;
+        }
+      }
+      /* menu móvel */
+      .gaveta {
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        background: rgba(9, 26, 48, 0.97);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .gaveta.aberta {
+        display: flex;
+      }
+      .gaveta a {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px;
+      }
+      .gaveta a:hover {
+        color: var(--ambar);
+      }
+      .fechar-menu {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2.2rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      /* HERO */
+      .hero {
+        position: relative;
+        color: #fff;
+        overflow: hidden;
+        background: linear-gradient(178deg, #0b2a4a 0%, #0a2540 46%, #081e36 100%);
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: clamp(460px, 52vw, 880px);
+        pointer-events: none;
+        background-image:
+          radial-gradient(
+            120% 90% at 100% 100%,
+            rgba(9, 26, 48, 0.92) 0%,
+            rgba(9, 26, 48, 0.6) 34%,
+            rgba(9, 26, 48, 0) 62%
+          ),
+          linear-gradient(
+            105deg,
+            rgba(9, 26, 48, 0.94) 0%,
+            rgba(9, 26, 48, 0.88) 42%,
+            rgba(10, 37, 64, 0.62) 72%,
+            rgba(10, 37, 64, 0.42) 100%
+          ),
+          url("imagens/hero.jpg");
+        background-size: cover, cover, cover;
+        background-position: center, center, center 34%;
+        background-repeat: no-repeat;
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          #000 0%,
+          #000 40%,
+          rgba(0, 0, 0, 0.82) 62%,
+          rgba(0, 0, 0, 0.36) 84%,
+          transparent 100%
+        );
+        mask-image: linear-gradient(
+          to bottom,
+          #000 0%,
+          #000 40%,
+          rgba(0, 0, 0, 0.82) 62%,
+          rgba(0, 0, 0, 0.36) 84%,
+          transparent 100%
+        );
+      }
+      .hero-in {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        gap: clamp(32px, 4vw, 56px);
+        align-items: start;
+        padding: clamp(130px, 14vw, 160px) 0 clamp(64px, 7vw, 88px);
+      }
+      @media (max-width: 1040px) {
+        .hero-in {
+          grid-template-columns: 1fr;
+          padding-top: 120px;
+        }
+      }
+      .hero-copy {
+        padding-top: 20px;
+      }
+      .hero h1 em {
+        display: block;
+        font-style: normal;
+        color: var(--ambar);
+      }
+      .hero-sub {
+        font-size: 1.15rem;
+        line-height: 1.55;
+        color: #c8d3e0;
+        max-width: 52ch;
+        margin: 24px 0 34px;
+      }
+      .abaixo {
+        display: none;
+      }
+      @media (max-width: 1040px) {
+        .ao-lado {
+          display: none;
+        }
+        .abaixo {
+          display: inline;
+        }
+      }
+      .hero-acoes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 40px;
+      }
+      .hero-nums {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(24px, 4vw, 44px);
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+        padding-top: 26px;
+      }
+      .hero-nums b {
+        display: block;
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 1.85rem;
+        color: #fff;
+        line-height: 1.1;
+      }
+      .hero-nums span {
+        font-size: 0.84rem;
+        color: var(--cinza-claro);
+      }
+
+      /* SIMULADOR */
+      .calc {
+        background: var(--branco);
+        color: var(--tinta);
+        border-radius: 18px;
+        box-shadow: 0 30px 60px -25px rgba(0, 0, 0, 0.5);
+        padding: 28px;
+      }
+      .calc h2 {
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+      .calc-sub {
+        font-size: 0.92rem;
+        color: var(--cinza);
+        margin: 6px 0 24px;
+      }
+      .campo {
+        margin-bottom: 22px;
+      }
+      .campo-rot,
+      .campo > label {
+        display: block;
+        font-family: var(--display);
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #8a97a6;
+        margin-bottom: 9px;
+      }
+      .conta-linha {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        border-bottom: 2px solid #eceff3;
+        padding-bottom: 8px;
+        margin-bottom: 14px;
+      }
+      .conta-cifra {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: #8a97a6;
+      }
+      #contaNum {
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 2.25rem;
+        width: 100%;
+        border: none;
+        padding: 0;
+        color: var(--tinta);
+        background: transparent;
+        letter-spacing: -0.02em;
+      }
+      #contaNum:focus {
+        outline: none;
+      }
+      .conta-linha:focus-within {
+        border-bottom-color: var(--laranja);
+      }
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 6px;
+        border-radius: 99px;
+        background: linear-gradient(
+          90deg,
+          var(--laranja) var(--pct, 32%),
+          #eceff3 var(--pct, 32%)
+        );
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--branco);
+        border: 3px solid var(--laranja);
+        cursor: pointer;
+        box-shadow: 0 3px 10px rgba(10, 37, 64, 0.25);
+      }
+      input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--branco);
+        border: 3px solid var(--laranja);
+        cursor: pointer;
+      }
+      .escala {
+        display: flex;
+        justify-content: space-between;
+        font-family: var(--display);
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: #8a97a6;
+        margin-top: 8px;
+      }
+
+      .chips {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .chip {
+        padding: 12px 6px;
+        border: 1.5px solid var(--linha);
+        background: var(--branco);
+        border-radius: var(--r-sm);
+        font-family: var(--corpo);
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--cinza);
+        cursor: pointer;
+        transition: 0.15s;
+      }
+      .chip:hover {
+        border-color: var(--azul-eletrico);
+      }
+      .chip[aria-pressed="true"] {
+        background: var(--noite);
+        border-color: var(--noite);
+        color: #fff;
+      }
+
+      .switch {
+        display: flex;
+        background: var(--gelo);
+        border-radius: var(--r-sm);
+        padding: 4px;
+        gap: 4px;
+      }
+      .switch button {
+        flex: 1;
+        padding: 11px 6px;
+        border: none;
+        background: transparent;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 0.86rem;
+        color: var(--cinza);
+        transition: 0.15s;
+      }
+      .switch button[aria-pressed="true"] {
+        background: var(--noite);
+        color: #fff;
+      }
+
+      .resultado {
+        margin-top: 26px;
+        background: var(--noite);
+        border-radius: 12px;
+        padding: 22px;
+        color: #fff;
+      }
+      .res-rot {
+        font-family: var(--display);
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ambar);
+        margin: 0 0 6px;
+      }
+      #economia {
+        font-family: var(--display);
+        font-weight: 900;
+        font-size: clamp(2.3rem, 5.5vw, 2.7rem);
+        line-height: 1;
+        letter-spacing: -0.03em;
+        color: #fff;
+        margin: 0;
+      }
+      #economiaNota {
+        font-size: 0.88rem;
+        color: var(--cinza-claro);
+        margin: 10px 0 0;
+      }
+      .res-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        margin-top: 22px;
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 9px;
+        overflow: hidden;
+      }
+      @media (max-width: 560px) {
+        .res-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .res-item {
+        background: #0c2c4d;
+        padding: 13px 11px;
+      }
+      .res-item span {
+        display: block;
+        font-family: var(--display);
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8fa3bb;
+        margin-bottom: 5px;
+      }
+      .res-item b {
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 1.02rem;
+        color: #fff;
+      }
+      .res-item b i {
+        font-style: normal;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--cinza-claro);
+      }
+
+      .grafico {
+        margin-top: 22px;
+      }
+      .graf-cab {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+      .graf-cab h4 {
+        font-size: 0.92rem;
+        color: #fff;
+      }
+      .graf-cab span {
+        font-family: var(--display);
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: #8fa3bb;
+      }
+      .legenda {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        font-family: var(--display);
+        font-size: 0.66rem;
+        font-weight: 500;
+        color: var(--cinza-claro);
+        margin: 10px 0 0;
+      }
+      .legenda i {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 2px;
+        margin-right: 6px;
+        vertical-align: -1px;
+      }
+      .aviso {
+        font-size: 0.75rem;
+        color: #8a97a6;
+        margin: 16px 0 0;
+        line-height: 1.5;
+      }
+      .calc-cta {
+        margin-top: 18px;
+      }
+
+      /* BLOCOS */
+      .escuro {
+        background: linear-gradient(160deg, var(--noite), #06172c);
+        color: #fff;
+      }
+      .escuro h2 {
+        color: #fff;
+      }
+      .cab {
+        max-width: 64ch;
+        margin-bottom: clamp(36px, 4vw, 56px);
+      }
+      .cab h2 {
+        margin-bottom: 16px;
+      }
+
+      .dor-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: center;
+      }
+      @media (max-width: 900px) {
+        .dor-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .dor-lista {
+        list-style: none;
+        padding: 0;
+        margin: 26px 0 0;
+        display: grid;
+        gap: 16px;
+      }
+      .dor-lista li {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        color: #c1d0e0;
+        font-size: 1rem;
+      }
+      .dor-lista svg {
+        flex: none;
+        margin-top: 5px;
+      }
+      .painel {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--r-md);
+        padding: 30px;
+      }
+      .painel-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 14px;
+        padding: 16px 0;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.16);
+      }
+      .painel-item:last-of-type {
+        border-bottom: none;
+      }
+      .painel-item span {
+        color: var(--cinza-claro);
+        font-size: 0.95rem;
+      }
+      .painel-item b {
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 1.05rem;
+        color: #fff;
+        white-space: nowrap;
+      }
+      .painel-item b.up {
+        color: var(--laranja);
+      }
+      .painel-item b.down {
+        color: #4fd6a0;
+      }
+      .painel .aviso {
+        color: #7f95ae;
+      }
+
+      /* SERVIÇOS */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 22px;
+      }
+      .card {
+        border: 1px solid var(--linha);
+        border-radius: var(--r-md);
+        padding: 30px 26px;
+        background: var(--branco);
+        transition:
+          border-color 0.2s ease,
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .card:hover {
+        border-color: var(--azul-eletrico);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -28px rgba(10, 37, 64, 0.6);
+      }
+      .card h3 {
+        margin-bottom: 10px;
+      }
+      .card p {
+        font-size: 0.96rem;
+        color: var(--cinza);
+        margin: 0;
+      }
+      .card-icone {
+        width: 46px;
+        height: 46px;
+        border-radius: 11px;
+        background: var(--azul-neve);
+        display: grid;
+        place-items: center;
+        margin-bottom: 18px;
+      }
+
+      /* COMO FUNCIONA */
+      .trilha {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(168deg, #0c2c4d 0%, var(--noite-3) 100%);
+        color: #fff;
+      }
+      .trilha::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.6;
+        background: radial-gradient(
+          640px 340px at 12% -10%,
+          rgba(242, 107, 33, 0.24),
+          transparent 62%
+        );
+      }
+      .trilha .wrap {
+        position: relative;
+      }
+      .trilha h2 {
+        color: #fff;
+      }
+      .trilha .lead {
+        color: var(--cinza-claro);
+      }
+      .trilha-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding-top: 8px;
+      }
+      .trilho {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 27px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .trilho span {
+        display: block;
+        height: 100%;
+        width: 0;
+        border-radius: 2px;
+        background: linear-gradient(90deg, var(--laranja), var(--ambar));
+        transition: width 2.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .trilha-grid.andando .trilho span {
+        width: 100%;
+      }
+      .etapa {
+        position: relative;
+      }
+      .marco {
+        position: relative;
+        z-index: 2;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        margin-bottom: 22px;
+        background: #0c2c4d;
+        border: 2px solid rgba(255, 255, 255, 0.18);
+        font-family: var(--display);
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #8fa3bb;
+        transition:
+          background 0.45s ease,
+          border-color 0.45s ease,
+          color 0.45s ease,
+          box-shadow 0.45s ease;
+      }
+      .etapa.aceso .marco {
+        background: var(--laranja);
+        border-color: var(--laranja);
+        color: #fff;
+        box-shadow: 0 0 0 6px rgba(242, 107, 33, 0.18);
+      }
+      .etapa h3 {
+        font-size: 1.06rem;
+        margin-bottom: 8px;
+        color: #fff;
+      }
+      .etapa p {
+        font-size: 0.94rem;
+        color: var(--cinza-claro);
+        margin: 0;
+      }
+      .etapa-quando {
+        display: block;
+        font-family: var(--display);
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ambar);
+        margin-bottom: 10px;
+      }
+      @media (max-width: 900px) {
+        .trilha-grid {
+          grid-template-columns: 1fr;
+          gap: 0;
+          padding-left: 76px;
+        }
+        .trilho {
+          left: 26px;
+          right: auto;
+          top: 8px;
+          bottom: 0;
+          width: 2px;
+          height: auto;
+          -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent);
+          mask-image: linear-gradient(to bottom, #000 78%, transparent);
+        }
+        .trilho span {
+          width: 100%;
+          height: 0;
+          transition: height 2.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .trilha-grid.andando .trilho span {
+          height: 100%;
+        }
+        .etapa {
+          padding-bottom: 38px;
+        }
+        .etapa:last-child {
+          padding-bottom: 0;
+        }
+        .marco {
+          position: absolute;
+          left: -76px;
+          top: 0;
+          margin: 0;
+        }
+      }
+
+      /* PROJETOS */
+      .projetos {
+        background: var(--gelo);
+      }
+      .proj-cab {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 34px;
+      }
+      .proj-setas {
+        display: flex;
+        gap: 10px;
+        flex: none;
+      }
+      .seta {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1.5px solid var(--linha);
+        background: var(--branco);
+        color: var(--noite);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition: 0.18s;
+      }
+      .seta:hover:not(:disabled) {
+        background: var(--noite);
+        border-color: var(--noite);
+        color: #fff;
+      }
+      .seta:disabled {
+        opacity: 0.32;
+        cursor: default;
+      }
+      @media (max-width: 720px) {
+        .proj-setas {
+          display: none;
+        }
+      }
+
+      .esteira {
+        --recuo: max(4vw, calc(50vw - 620px));
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding: 4px var(--recuo) 18px;
+        scroll-padding-inline: var(--recuo);
+        scrollbar-width: none;
+        cursor: grab;
+      }
+      .esteira::-webkit-scrollbar {
+        display: none;
+      }
+      .esteira.arrastando {
+        cursor: grabbing;
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+      }
+      .proj {
+        position: relative;
+        flex: none;
+        width: clamp(260px, 30vw, 400px);
+        aspect-ratio: 4 / 5;
+        border-radius: var(--r-md);
+        overflow: hidden;
+        scroll-snap-align: start;
+        background:
+          radial-gradient(
+            120% 90% at 30% 0%,
+            rgba(242, 107, 33, 0.35),
+            transparent 60%
+          ),
+          linear-gradient(160deg, var(--noite), #06172c);
+        box-shadow: 0 18px 40px -26px rgba(10, 37, 64, 0.7);
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+      .proj:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 60px -30px rgba(10, 37, 64, 0.75);
+      }
+      .proj img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s cubic-bezier(0.22, 0.68, 0.28, 1);
+        -webkit-user-drag: none;
+        user-select: none;
+      }
+      .proj:hover img {
+        transform: scale(1.06);
+      }
+      .proj img[data-vazia] {
+        opacity: 0;
+      }
+      .proj::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--r-md);
+      }
+      .proj-marca {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        opacity: 0.22;
+        pointer-events: none;
+      }
+      .proj:has(img:not([data-vazia])) .proj-marca {
+        display: none;
+      }
+
+      /* SOBRE */
+      .empresa-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: center;
+      }
+      @media (max-width: 900px) {
+        .empresa-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .retrato {
+        position: relative;
+        margin: 0;
+      }
+      .retrato img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border-radius: var(--r-lg);
+        box-shadow: 0 24px 60px -26px rgba(10, 37, 64, 0.5);
+      }
+      .retrato::before {
+        content: "";
+        position: absolute;
+        inset: auto -14px -14px auto;
+        width: 62%;
+        height: 56%;
+        border: 1.5px solid var(--linha);
+        border-radius: var(--r-lg);
+        z-index: 0;
+      }
+      .retrato figcaption {
+        position: absolute;
+        z-index: 2;
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+        background: rgba(9, 26, 48, 0.86);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--r-sm);
+        padding: 14px 16px;
+      }
+      .retrato figcaption span {
+        display: block;
+        font-family: var(--display);
+        font-size: 0.64rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ambar);
+        margin-bottom: 5px;
+      }
+      .retrato figcaption b {
+        display: block;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: #fff;
+      }
+      @media (max-width: 900px) {
+        .retrato::before {
+          display: none;
+        }
+      }
+
+      /* FAQ */
+      .faq {
+        max-width: 820px;
+      }
+      .faq details {
+        border-bottom: 1px solid var(--linha);
+      }
+      .faq summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 22px 44px 22px 0;
+        position: relative;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary::after {
+        content: "+";
+        position: absolute;
+        right: 6px;
+        top: 17px;
+        font-family: var(--display);
+        font-size: 1.5rem;
+        color: var(--laranja);
+      }
+      .faq details[open] summary::after {
+        content: "–";
+      }
+      .faq details p {
+        color: var(--cinza);
+        font-size: 0.98rem;
+        padding: 0 44px 22px 0;
+        margin: 0;
+      }
+
+      /* CONTATO */
+      .orc {
+        background: linear-gradient(160deg, var(--azul), #0a3468);
+        color: #fff;
+      }
+      .orc-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.12fr;
+        gap: clamp(32px, 5vw, 64px);
+        align-items: start;
+      }
+      @media (max-width: 900px) {
+        .orc-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .orc h2 {
+        color: #fff;
+        margin-bottom: 16px;
+      }
+      .orc .lead {
+        color: #cfe1f7;
+      }
+      .orc-lista {
+        list-style: none;
+        padding: 0;
+        margin: 28px 0 0;
+        display: grid;
+        gap: 14px;
+        font-size: 0.98rem;
+        color: #cfe1f7;
+      }
+      .orc-lista li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .orc-lista svg {
+        flex: none;
+        margin-top: 5px;
+      }
+      .orc-canais {
+        display: grid;
+        gap: 12px;
+        margin-top: 32px;
+        padding-top: 26px;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+      }
+      .canal {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      .canal:hover {
+        color: var(--ambar);
+      }
+      .canal i {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.12);
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+
+      .form {
+        background: var(--branco);
+        color: var(--tinta);
+        border-radius: var(--r-lg);
+        padding: clamp(24px, 3vw, 34px);
+        box-shadow: var(--sombra);
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      @media (max-width: 560px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .f-campo {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .f-campo.largo {
+        grid-column: 1 / -1;
+      }
+      .f-campo label {
+        font-family: var(--display);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #8a97a6;
+      }
+      .f-campo input,
+      .f-campo select,
+      .f-campo textarea {
+        font-family: var(--corpo);
+        font-size: 1rem;
+        padding: 13px 14px;
+        border: 1.5px solid var(--linha);
+        border-radius: var(--r-sm);
+        background: var(--branco);
+        color: var(--tinta);
+        width: 100%;
+      }
+      .f-campo textarea {
+        resize: vertical;
+        min-height: 96px;
+      }
+      .f-campo input:focus,
+      .f-campo select:focus,
+      .f-campo textarea:focus {
+        border-color: var(--azul-eletrico);
+        outline: none;
+      }
+      .f-consent {
+        grid-column: 1 / -1;
+        display: flex;
+        gap: 11px;
+        align-items: flex-start;
+        font-size: 0.86rem;
+        color: var(--cinza);
+      }
+      .f-consent input {
+        width: 19px;
+        height: 19px;
+        flex: none;
+        margin-top: 3px;
+        accent-color: var(--laranja);
+      }
+      .form .btn {
+        grid-column: 1 / -1;
+        margin-top: 4px;
+      }
+      .f-nota {
+        grid-column: 1 / -1;
+        font-size: 0.8rem;
+        color: var(--cinza);
+        margin: 0;
+        text-align: center;
+      }
+
+      /* RODAPÉ */
+      .rodape {
+        background: var(--noite-3);
+        color: var(--cinza-claro);
+        padding: 64px 0 28px;
+        font-size: 0.94rem;
+      }
+      .rod-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+        gap: 36px;
+      }
+      @media (max-width: 860px) {
+        .rod-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 520px) {
+        .rod-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .rodape h4 {
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      .rodape ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 9px;
+      }
+      .rodape a {
+        text-decoration: none;
+      }
+      .rodape a:hover {
+        color: #fff;
+      }
+      .rod-logo {
+        height: 66px;
+        width: auto;
+        margin-bottom: 18px;
+      }
+      .rod-base {
+        margin-top: 48px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        font-size: 0.82rem;
+        color: #74899f;
+      }
+
+      /* WHATSAPP FIXO */
+      .zap {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 90;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #25d366;
+        color: #0a2e17;
+        text-decoration: none;
+        border-radius: 99px;
+        padding: 14px;
+        box-shadow: 0 12px 30px -8px rgba(37, 211, 102, 0.75);
+        transition: transform 0.2s ease;
+      }
+      .zap:hover {
+        transform: scale(1.05);
+      }
+      .zap span {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 0.92rem;
+        white-space: nowrap;
+        max-width: 0;
+        overflow: hidden;
+        transition:
+          max-width 0.3s ease,
+          margin 0.3s ease;
+        color: #0a2e17;
+      }
+      .zap:hover span,
+      .zap:focus-visible span {
+        max-width: 190px;
+        margin-right: 6px;
+      }
+      .zap::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 99px;
+        border: 2px solid #25d366;
+        animation: pulso 2.4s ease-out infinite;
+      }
+      @keyframes pulso {
+        0% {
+          transform: scale(1);
+          opacity: 0.7;
+        }
+        70% {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @media (max-width: 560px) {
+        .zap {
+          right: 14px;
+          bottom: 14px;
+        }
+      }
+
+      /* REVELAÇÃO AO ROLAR */
+      .rev {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .rev.vis {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          transition-duration: 0.001ms !important;
+        }
+        .rev {
+          opacity: 1;
+          transform: none;
+        }
+        .trilho span {
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+
+      .oculto {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topo" id="topo">
+      <div class="wrap topo-in">
+        <a
+          class="marca"
+          href="#inicio"
+          aria-label="Técnica Energia Solar, ir para o início"
+        >
+          <img
+            src="imagens/logo-branco.png"
+            alt="Técnica Energia Solar"
+            width="420"
+            height="200"
+          />
+        </a>
+        <nav class="menu" aria-label="Principal">
+          <a href="#servicos">Serviços</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#sobre">Sobre</a>
+        </nav>
+        <a class="btn btn-laranja" href="#contato">Pedir orçamento</a>
+        <button
+          class="abrir-menu"
+          type="button"
+          id="abrirMenu"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="gaveta" id="gaveta" role="dialog" aria-label="Menu">
+      <button class="fechar-menu" type="button" id="fecharMenu" aria-label="Fechar menu">
+        &times;
+      </button>
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </div>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="wrap hero-in">
+          <div class="hero-copy">
+            <p class="rotulo claro">
+              Energia solar para casa, comércio e campo
+            </p>
+            <h1>
+              Sua conta de luz já pagou um sistema solar.
+              <em>Só que não foi o seu.</em>
+            </h1>
+            <p class="hero-sub">
+              Projetamos, instalamos e homologamos energia solar para casas,
+              comércios e propriedades rurais. Coloque o valor da sua conta
+              <span class="ao-lado">ao lado</span><span class="abaixo">abaixo</span>
+              e veja quanto dinheiro fica com você.
+            </p>
+            <div class="hero-acoes">
+              <a class="btn btn-laranja" href="#contato"
+                >Quero meu orçamento</a
+              >
+              <a class="btn btn-linha" href="#como-funciona"
+                >Ver como funciona</a
+              >
+            </div>
+            <div class="hero-nums">
+              <div>
+                <b>+40</b><span>projetos instalados</span>
+              </div>
+              <div>
+                <b>25 anos</b><span>de garantia nos painéis</span>
+              </div>
+              <div>
+                <b>1 a 3 dias</b><span>de instalação</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc" id="simulador">
+            <h2>Simulador de economia</h2>
+            <p class="calc-sub">
+              Três informações da sua conta. O resto a gente calcula.
+            </p>
+
+            <div class="campo">
+              <label for="contaNum">Quanto você paga de luz por mês</label>
+              <div class="conta-linha">
+                <span class="conta-cifra" aria-hidden="true">R$</span>
+                <input
+                  id="contaNum"
+                  type="number"
+                  inputmode="numeric"
+                  min="100"
+                  max="50000"
+                  step="10"
+                  value="450"
+                  aria-describedby="contaAjuda"
+                />
+              </div>
+              <input
+                id="contaRange"
+                type="range"
+                min="150"
+                max="3000"
+                step="10"
+                value="450"
+                aria-label="Ajustar valor da conta de luz"
+              />
+              <div class="escala" id="contaAjuda">
+                <span>R$ 150</span><span>R$ 3.000+</span>
+              </div>
+            </div>
+
+            <div class="campo">
+              <p class="campo-rot" id="rotImovel">Tipo de imóvel</p>
+              <div class="chips" role="group" aria-labelledby="rotImovel">
+                <button
+                  type="button"
+                  class="chip"
+                  data-imovel="residencia"
+                  aria-pressed="true"
+                >
+                  Residência
+                </button>
+                <button
+                  type="button"
+                  class="chip"
+                  data-imovel="empresa"
+                  aria-pressed="false"
+                >
+                  Empresa
+                </button>
+                <button
+                  type="button"
+                  class="chip"
+                  data-imovel="rural"
+                  aria-pressed="false"
+                >
+                  Rural
+                </button>
+              </div>
+            </div>
+
+            <div class="campo">
+              <p class="campo-rot" id="rotLigacao">Padrão de entrada</p>
+              <div class="chips" role="group" aria-labelledby="rotLigacao">
+                <button
+                  type="button"
+                  class="chip"
+                  data-ligacao="mono"
+                  aria-pressed="true"
+                >
+                  Monofásico
+                </button>
+                <button
+                  type="button"
+                  class="chip"
+                  data-ligacao="bi"
+                  aria-pressed="false"
+                >
+                  Bifásico
+                </button>
+                <button
+                  type="button"
+                  class="chip"
+                  data-ligacao="tri"
+                  aria-pressed="false"
+                >
+                  Trifásico
+                </button>
+              </div>
+            </div>
+
+            <div class="campo">
+              <p class="campo-rot" id="rotPeriodo">Mostrar economia</p>
+              <div class="switch" role="group" aria-labelledby="rotPeriodo">
+                <button type="button" data-periodo="mes" aria-pressed="false">
+                  Por mês
+                </button>
+                <button type="button" data-periodo="ano" aria-pressed="true">
+                  Por ano
+                </button>
+                <button type="button" data-periodo="vida" aria-pressed="false">
+                  Em 25 anos
+                </button>
+              </div>
+            </div>
+
+            <div class="resultado">
+              <p class="res-rot" id="resRot">Você deixa de gastar por ano</p>
+              <p id="economia">R$ 0</p>
+              <p id="economiaNota">—</p>
+
+              <div class="res-grid">
+                <div class="res-item">
+                  <span>Sistema</span><b id="rSistema">—</b>
+                </div>
+                <div class="res-item">
+                  <span>Painéis</span><b id="rPaineis">—</b>
+                </div>
+                <div class="res-item">
+                  <span>Investimento</span><b id="rInvest">—</b>
+                </div>
+                <div class="res-item">
+                  <span>Retorno</span><b id="rPayback">—</b>
+                </div>
+              </div>
+
+              <div class="grafico">
+                <div class="graf-cab">
+                  <h4>Quando a usina se paga</h4>
+                  <span id="grafNota">ano a ano, do 1º ao 25º</span>
+                </div>
+                <svg
+                  id="grafico"
+                  viewBox="0 0 640 210"
+                  width="100%"
+                  role="img"
+                  aria-labelledby="grafTitulo"
+                >
+                  <title id="grafTitulo">
+                    Economia acumulada ano a ano comparada ao valor investido
+                  </title>
+                </svg>
+                <p class="legenda">
+                  <span><i style="background: #2f86d8"></i>antes do retorno</span>
+                  <span><i style="background: #f26b21"></i>lucro limpo</span>
+                  <span><i style="background: #ffc01e"></i>valor investido</span>
+                </p>
+              </div>
+            </div>
+
+            <button
+              class="btn btn-laranja btn-bloco calc-cta"
+              type="button"
+              id="btnLevar"
+            >
+              Levar esses números para o orçamento
+            </button>
+            <p class="aviso">
+              Investimento calculado sobre a tabela de preços da Técnica.
+              Estimativa com tarifa média de R$ 1,00/kWh e irradiação de Minas
+              Gerais, já considerando a cobrança do Fio B (Lei 14.300), reajuste
+              de 6% ao ano na tarifa e perda de 0,5% ao ano nos módulos. O número
+              exato sai depois que analisamos sua conta e seu telhado.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec escuro">
+        <div class="wrap dor-grid">
+          <div class="rev">
+            <p class="rotulo claro">O problema</p>
+            <h2>Se você já paga luz todo mês, já tem como gerar a sua.</h2>
+            <p class="lead">
+              A conta de energia é a única despesa que sobe todo ano e nunca
+              vira patrimônio. O dinheiro sai, some, e no mês seguinte começa de
+              novo. Uma usina solar quebra esse ciclo: o mesmo valor que ia
+              embora vira um equipamento no seu telhado, gerando por mais de
+              duas décadas.
+            </p>
+            <ul class="dor-lista">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 3v14M4 9l6-6 6 6"
+                    stroke="#F26B21"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+                <span
+                  >A tarifa residencial subiu bem acima da inflação na última
+                  década. Quem não gera, paga o reajuste inteiro.</span
+                >
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 3v14M4 9l6-6 6 6"
+                    stroke="#F26B21"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+                <span
+                  >Bandeira vermelha, ar-condicionado no verão, câmara fria no
+                  comércio, irrigação no campo: o consumo cresce e a conta
+                  acompanha.</span
+                >
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 17V3M4 11l6 6 6-6"
+                    stroke="#4FD6A0"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+                <span
+                  >Com geração própria sobra apenas o custo de disponibilidade e
+                  a iluminação pública. O resto fica com você.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="painel rev">
+            <p class="rotulo claro">Comparação de 25 anos</p>
+            <div class="painel-item">
+              <span>Sem energia solar, você paga</span>
+              <b class="up" id="comparaSem">—</b>
+            </div>
+            <div class="painel-item">
+              <span>Com energia solar, você investe</span>
+              <b class="down" id="comparaCom">—</b>
+            </div>
+            <div class="painel-item">
+              <span>Diferença no seu bolso</span><b id="comparaDif">—</b>
+            </div>
+            <div class="painel-item">
+              <span>CO₂ que deixa de ser emitido</span><b id="comparaCo2">—</b>
+            </div>
+            <p class="aviso">
+              Valores puxados do simulador. Mexa nos campos lá em cima e este
+              quadro acompanha.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="servicos">
+        <div class="wrap">
+          <div class="cab rev">
+            <p class="rotulo">Serviços</p>
+            <h2>Venda, instalação e manutenção de usinas solares.</h2>
+            <p class="lead">
+              Cada telhado pede um projeto diferente. O que muda é o
+              dimensionamento, a estrutura e a forma de conectar. O cuidado é o
+              mesmo em todos.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card rev">
+              <div class="card-icone">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M3 11l9-7 9 7v9a1 1 0 01-1 1H4a1 1 0 01-1-1v-9z"
+                    stroke="#14508F"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Residencial</h3>
+              <p>
+                Usina solar para a sua casa, dimensionada pela conta de luz da
+                família. Cuidamos do projeto, da instalação no telhado e da
+                homologação junto à concessionária.
+              </p>
+            </article>
+            <article class="card rev">
+              <div class="card-icone">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M4 21V6l8-3 8 3v15"
+                    stroke="#14508F"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path d="M9 21v-6h6v6" stroke="#14508F" stroke-width="1.8" />
+                </svg>
+              </div>
+              <h3>Empresas</h3>
+              <p>
+                Mercados, oficinas, clínicas e indústrias. Dimensionamos pela
+                curva real de consumo e pela demanda contratada, não só pelo
+                valor da fatura.
+              </p>
+            </article>
+            <article class="card rev">
+              <div class="card-icone">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M3 18c3-6 6-9 9-9s6 3 9 9"
+                    stroke="#14508F"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="12" cy="5" r="2.5" stroke="#F26B21" stroke-width="1.8" />
+                </svg>
+              </div>
+              <h3>Agronegócio</h3>
+              <p>
+                Aviário, resfriador de leite, irrigação e secador. Quando o
+                telhado não ajuda, instalamos em solo com estrutura calculada
+                para o vento da região.
+              </p>
+            </article>
+            <article class="card rev">
+              <div class="card-icone">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"
+                    stroke="#F26B21"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Manutenção</h3>
+              <p>
+                Também cuidamos de usina instalada por outra empresa: limpeza,
+                troca de inversor, laudo de geração e reativação do
+                monitoramento.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec trilha" id="como-funciona">
+        <div class="wrap">
+          <div class="cab rev">
+            <p class="rotulo claro">Como funciona</p>
+            <h2>Da primeira conversa até a energia entrando no medidor.</h2>
+            <p class="lead">
+              Quatro etapas. Em duas delas você não precisa fazer nada, porque a
+              papelada com a concessionária é conosco.
+            </p>
+          </div>
+
+          <div class="trilha-grid rev">
+            <div class="trilho" aria-hidden="true"><span></span></div>
+            <div class="etapa">
+              <span class="marco">01</span>
+              <span class="etapa-quando">2 a 3 dias</span>
+              <h3>Visita e análise</h3>
+              <p>
+                Analisamos sua conta dos últimos 12 meses e medimos o telhado
+                para dimensionar a usina certa.
+              </p>
+            </div>
+            <div class="etapa">
+              <span class="marco">02</span>
+              <span class="etapa-quando">até 30 dias</span>
+              <h3>Projeto e homologação</h3>
+              <p>
+                Projeto assinado com ART e pedido de acesso protocolado. Você
+                não precisa falar com a concessionária.
+              </p>
+            </div>
+            <div class="etapa">
+              <span class="marco">03</span>
+              <span class="etapa-quando">1 a 3 dias</span>
+              <h3>Instalação</h3>
+              <p>
+                Equipe própria, estrutura de alumínio e aço inox, cabeamento
+                protegido em eletroduto.
+              </p>
+            </div>
+            <div class="etapa">
+              <span class="marco">04</span>
+              <span class="etapa-quando">7 a 15 dias</span>
+              <h3>Troca do medidor</h3>
+              <p>
+                A concessionária troca o relógio e ligamos o inversor. Você
+                acompanha a geração pelo celular.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec projetos" id="projetos">
+        <div class="wrap">
+          <div class="proj-cab rev">
+            <div>
+              <p class="rotulo">Projetos</p>
+              <h2>Usinas que já estão gerando.</h2>
+            </div>
+            <div class="proj-setas">
+              <button class="seta" type="button" id="projAnterior" aria-label="Ver projetos anteriores">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="seta" type="button" id="projProximo" aria-label="Ver próximos projetos">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="esteira rev" id="esteira" tabindex="0" role="group" aria-label="Galeria de projetos, role para o lado">
+            <figure class="proj">
+              <img
+                src="imagens/projeto-01.jpg"
+                alt="Usina em telhado colonial pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"><svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" fill="#FFC01E"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#FFC01E" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-02.jpg"
+                alt="Usina em telhado de telha cerâmica pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"><svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" fill="#FFC01E"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#FFC01E" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-03.jpg"
+                alt="Usina instalada em solo pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"><svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" fill="#FFC01E"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#FFC01E" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-04.jpg"
+                alt="Usina em telhado metálico pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"><svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" fill="#FFC01E"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#FFC01E" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-05.jpg"
+                alt="Usina residencial em telha cerâmica pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"><svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" fill="#FFC01E"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#FFC01E" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-06.jpg"
+                alt="Usina em operação ao pôr do sol pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"><svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" fill="#FFC01E"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#FFC01E" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-07.jpg"
+                alt="Usina em solo em propriedade rural pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"><svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" fill="#FFC01E"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#FFC01E" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-08.jpg"
+                alt="Usina em telhado de casa de campo pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"><svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" fill="#FFC01E"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#FFC01E" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </figure>
+        </div>
+      </section>
+
+      <section class="sec" id="sobre">
+        <div class="wrap empresa-grid">
+          <div class="rev">
+            <p class="rotulo">Sobre</p>
+            <h2>Quem faz o orçamento é quem sobe no telhado.</h2>
+            <p class="lead">
+              A Técnica Energia Solar trabalha com venda, instalação e
+              manutenção de usinas solares fotovoltaicas para residências,
+              empresas e agronegócio.
+            </p>
+            <p class="lead">
+              O orçamento sai fechado: projeto, ART, estrutura, mão de obra e
+              homologação no mesmo número, sem extras aparecendo no meio da
+              obra. Só trabalhamos com inversores que têm assistência técnica no
+              Brasil, porque garantia que existe apenas no papel não conserta
+              nada.
+            </p>
+            <p class="lead">
+              Quem instalou é quem responde depois. Você liga para a mesma
+              equipe que subiu no seu telhado, e não para um atendimento que
+              nunca viu a sua instalação.
+            </p>
+            <div class="hero-acoes" style="margin-top: 28px">
+              <a class="btn btn-azul" href="#contato">Falar com a equipe</a>
+            </div>
+          </div>
+
+          <figure class="retrato rev">
+            <img
+              src="imagens/sobre.jpg"
+              alt="Instalador da Técnica Energia Solar fixando os painéis no telhado"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              <span>Equipe própria</span>
+              <b>Instalação, homologação e manutenção com equipe própria</b>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="sec" id="duvidas" style="background: var(--gelo)">
+        <div class="wrap">
+          <div class="cab rev">
+            <p class="rotulo">Dúvidas</p>
+            <h2>O que todo mundo pergunta antes de fechar.</h2>
+          </div>
+          <div class="faq rev">
+            <details open>
+              <summary>Com a Lei 14.300, ainda compensa?</summary>
+              <p>
+                Compensa. A lei criou uma cobrança gradual sobre a energia que
+                você injeta na rede e usa depois, aumentando por etapas até
+                2029. Na prática isso reduz a economia, não elimina: a maioria
+                dos projetos residenciais segue economizando entre 75% e 90% da
+                fatura.
+              </p>
+            </details>
+            <details>
+              <summary>E nos dias nublados e no inverno?</summary>
+              <p>
+                O painel trabalha com luz, não com calor. Em dia nublado ele
+                gera menos, nunca zero. O dimensionamento já considera a média
+                anual: o excedente dos meses fortes vira crédito na
+                distribuidora e abate o consumo dos meses fracos. Os créditos
+                valem por 60 meses.
+              </p>
+            </details>
+            <details>
+              <summary>Dá para financiar?</summary>
+              <p>
+                Sim. Existem linhas de financiamento específicas para energia
+                solar em bancos e cooperativas. Na maioria dos casos a parcela
+                fica próxima do valor que você já paga de luz. Só que ela
+                termina, e a conta não.
+              </p>
+            </details>
+            <details>
+              <summary>Meu telhado aguenta o peso?</summary>
+              <p>
+                Um sistema residencial pesa cerca de 15 kg por metro quadrado,
+                dentro do que uma estrutura em bom estado suporta. Na visita
+                conferimos madeiramento e telha. Se não estiver adequado,
+                apontamos o reforço necessário ou instalamos em solo.
+              </p>
+            </details>
+            <details>
+              <summary>Se faltar luz na rede, o sistema continua funcionando?</summary>
+              <p>
+                Não, e isso é exigência de segurança: o inversor conectado à
+                rede desliga para não energizar o poste enquanto a equipe da
+                distribuidora trabalha. Se você precisa de energia durante
+                apagões, existe a versão híbrida com bateria. Orçamos junto se
+                fizer sentido para o seu caso.
+              </p>
+            </details>
+            <details>
+              <summary>Preciso fazer manutenção?</summary>
+              <p>
+                Pouca. Limpeza a cada 6 a 12 meses, dependendo de poeira e
+                pólen, e uma conferência anual do inversor e das conexões. O
+                monitoramento avisa se algum painel cai de rendimento antes de
+                você perceber na conta.
+              </p>
+            </details>
+            <details>
+              <summary>Vocês fazem manutenção em sistema de outra empresa?</summary>
+              <p>
+                Fazemos. Limpeza, troca de inversor, correção de estrutura,
+                laudo de geração e reativação de monitoramento, mesmo que a
+                usina tenha sido instalada por outro fornecedor.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec orc" id="contato">
+        <div class="wrap orc-grid">
+          <div class="rev">
+            <p class="rotulo claro">Orçamento sem custo</p>
+            <h2>Mande sua conta de luz. Devolvemos números, não promessas.</h2>
+            <p class="lead">
+              Você recebe o dimensionamento da usina, o investimento fechado, o
+              tempo de retorno e a projeção de geração. Se não fizer sentido, a
+              gente diz.
+            </p>
+            <ul class="orc-lista">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10.5l4 4 8-9" stroke="#FFC01E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Resposta em até 1 dia útil, pelo canal que você escolher</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10.5l4 4 8-9" stroke="#FFC01E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Visita técnica sem compromisso</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10.5l4 4 8-9" stroke="#FFC01E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Proposta com preço fechado: projeto, ART, material, instalação e homologação</span>
+              </li>
+            </ul>
+
+            <div class="orc-canais">
+              <a class="canal" href="https://wa.me/5531995917494" target="_blank" rel="noopener">
+                <i>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.16c-.25.69-1.43 1.32-1.97 1.37-.53.05-1.02.24-3.44-.72-2.9-1.14-4.75-4.1-4.9-4.29-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.29.3-.12.58.16.29.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.45.12.62-.07.17-.19.71-.83.9-1.11.19-.29.38-.24.64-.14.26.09 1.67.79 1.95.93.29.14.48.21.55.33.07.12.07.69-.18 1.38z"/>
+                  </svg>
+                </i>
+                <span>(31) 99591-7494</span>
+              </a>
+              <a class="canal" href="mailto:tecnicaenergiasolar10@hotmail.com">
+                <i>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#fff" stroke-width="1.8"/>
+                    <path d="M4 7l8 6 8-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </i>
+                <span>tecnicaenergiasolar10@hotmail.com</span>
+              </a>
+              <a class="canal" href="https://instagram.com/tecnicaenergiasolar" target="_blank" rel="noopener">
+                <i>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.8"/>
+                    <circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.8"/>
+                    <circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/>
+                  </svg>
+                </i>
+                <span>@tecnicaenergiasolar</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="form" id="formOrcamento" novalidate>
+            <div class="form-grid">
+              <div class="f-campo largo">
+                <label for="fNome">Nome</label>
+                <input id="fNome" name="nome" type="text" autocomplete="name" required placeholder="Como podemos te chamar" />
+              </div>
+              <div class="f-campo">
+                <label for="fZap">WhatsApp</label>
+                <input id="fZap" name="zap" type="tel" autocomplete="tel" required placeholder="(31) 90000-0000" />
+              </div>
+              <div class="f-campo">
+                <label for="fCidade">Cidade</label>
+                <input id="fCidade" name="cidade" type="text" required placeholder="Sua cidade" />
+              </div>
+              <div class="f-campo">
+                <label for="fTipo">Tipo de imóvel</label>
+                <select id="fTipo" name="tipo">
+                  <option value="Residência">Residência</option>
+                  <option value="Empresa">Empresa</option>
+                  <option value="Propriedade rural">Propriedade rural</option>
+                  <option value="Manutenção de usina existente">Manutenção de usina existente</option>
+                </select>
+              </div>
+              <div class="f-campo">
+                <label for="fConta">Conta de luz por mês</label>
+                <input id="fConta" name="conta" type="text" inputmode="numeric" placeholder="R$ 450" />
+              </div>
+              <div class="f-campo largo">
+                <label for="fMsg">Algo que a gente deva saber</label>
+                <textarea id="fMsg" name="mensagem" placeholder="Tipo de telhado, se pretende financiar, se já tem orçamento de outra empresa…"></textarea>
+              </div>
+              <label class="f-consent">
+                <input type="checkbox" id="fLgpd" required />
+                <span
+                  >Autorizo a Técnica Energia Solar a entrar em contato sobre
+                  este orçamento. Seus dados não são compartilhados com
+                  terceiros.</span
+                >
+              </label>
+              <button class="btn btn-laranja btn-bloco" type="submit">
+                Enviar e receber meu orçamento
+              </button>
+              <p class="f-nota" id="formNota">
+                O envio abre o WhatsApp com sua mensagem já escrita.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="wrap">
+        <div class="rod-grid">
+          <div>
+            <a href="#inicio" aria-label="Técnica Energia Solar, ir para o início">
+              <img class="rod-logo" src="imagens/logo-branco.png" onerror="reserva(this,'logo')" alt="Técnica Energia Solar" />
+            </a>
+            <p style="max-width: 34ch">
+              Venda, instalação e manutenção de usinas solares fotovoltaicas
+              para residências, empresas e agronegócio.
+            </p>
+          </div>
+          <div>
+            <h4>Site</h4>
+            <ul>
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#como-funciona">Como funciona</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Serviços</h4>
+            <ul>
+              <li>Usinas residenciais</li>
+              <li>Usinas para empresas</li>
+              <li>Energia solar no agronegócio</li>
+              <li>Manutenção e limpeza</li>
+              <li>Projeto e homologação</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contato</h4>
+            <ul>
+              <li>
+                <a href="https://wa.me/5531995917494" target="_blank" rel="noopener"
+                  >WhatsApp (31) 99591-7494</a
+                >
+              </li>
+              <li>
+                <a href="mailto:tecnicaenergiasolar10@hotmail.com"
+                  >tecnicaenergiasolar10@hotmail.com</a
+                >
+              </li>
+              <li>
+                <a href="https://instagram.com/tecnicaenergiasolar" target="_blank" rel="noopener"
+                  >Instagram @tecnicaenergiasolar</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="rod-base">
+          <span>© <span id="ano">2026</span> Técnica Energia Solar</span>
+          <span>Simulações são estimativas e não substituem o projeto técnico.</span>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="zap"
+      id="zapFixo"
+      href="https://wa.me/5531995917494"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="#0A2E17" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.16c-.25.69-1.43 1.32-1.97 1.37-.53.05-1.02.24-3.44-.72-2.9-1.14-4.75-4.1-4.9-4.29-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.29.3-.12.58.16.29.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.45.12.62-.07.17-.19.71-.83.9-1.11.19-.29.38-.24.64-.14.26.09 1.67.79 1.95.93.29.14.48.21.55.33.07.12.07.69-.18 1.38z"/>
+      </svg>
+      <span>Falar agora</span>
+    </a>
+
+    <script>
+      /* Configuração */
+      const WHATSAPP = "5531995917494"; // DDI + DDD, só dígitos
+      const TARIFA = 1.0; // R$ por kWh
+      const IRRADIACAO = 125; // kWh gerados por kWp ao mês (MG)
+      const POTENCIA_MODULO = 0.61; // kWp por painel
+      const REAJUSTE = 0.06; // reajuste anual da tarifa
+      const DEGRADACAO = 0.005; // perda anual de geração
+      const FIO_B = 0.85; // parcela da conta que sobra de economia (Lei 14.300)
+      const ANOS = 25;
+
+      const MIN_KWH = { mono: 30, bi: 50, tri: 100 }; // custo de disponibilidade
+
+      /* Preço por geração mensal (kWh/mês) */
+      const PRECO_USINA = [
+        { geracao: 150, preco: 5233 },
+        { geracao: 300, preco: 7233 },
+        { geracao: 700, preco: 16500 },
+      ];
+
+      function precoDaUsina(geracaoMes) {
+        const t = PRECO_USINA;
+        if (geracaoMes <= t[0].geracao) return t[0].preco;
+        for (let i = 1; i < t.length; i++) {
+          if (geracaoMes <= t[i].geracao) {
+            const a = t[i - 1],
+              b = t[i];
+            return (
+              a.preco +
+              ((geracaoMes - a.geracao) * (b.preco - a.preco)) /
+                (b.geracao - a.geracao)
+            );
+          }
+        }
+        const a = t[t.length - 2],
+          b = t[t.length - 1];
+        const porKWh = (b.preco - a.preco) / (b.geracao - a.geracao);
+        return b.preco + (geracaoMes - b.geracao) * porKWh;
+      }
+
+      /* ESTADO */
+      const estado = {
+        conta: 450,
+        imovel: "residencia",
+        ligacao: "mono",
+        periodo: "ano",
+      };
+
+      const brl = (n) =>
+        n.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+          maximumFractionDigits: 0,
+        });
+      const num = (n, d = 1) =>
+        n.toLocaleString("pt-BR", {
+          minimumFractionDigits: d,
+          maximumFractionDigits: d,
+        });
+
+      function calcular() {
+        const minimo = MIN_KWH[estado.ligacao] * TARIFA;
+        const economiaMes = Math.max(estado.conta - minimo, 0) * FIO_B;
+        const geracaoMes = estado.conta / TARIFA;
+        const investimento = Math.round(precoDaUsina(geracaoMes));
+        const kwp = Math.max(geracaoMes / IRRADIACAO, 0.61);
+        const paineis = Math.max(Math.round(kwp / POTENCIA_MODULO), 1);
+        const kwpReal = paineis * POTENCIA_MODULO;
+
+        let acumulado = 0,
+          contaAcumulada = 0,
+          payback = null;
+        const serie = [];
+        for (let a = 1; a <= ANOS; a++) {
+          const reajuste = Math.pow(1 + REAJUSTE, a - 1);
+          const ganhoAno =
+            economiaMes * 12 * reajuste * Math.pow(1 - DEGRADACAO, a - 1);
+          const anterior = acumulado;
+          acumulado += ganhoAno;
+          contaAcumulada += estado.conta * 12 * reajuste;
+          if (payback === null && acumulado >= investimento) {
+            payback = a - 1 + (investimento - anterior) / ganhoAno;
+          }
+          serie.push(acumulado);
+        }
+        const geracaoAnualMWh = (kwpReal * IRRADIACAO * 12) / 1000;
+        return {
+          economiaMes,
+          economiaAno: economiaMes * 12,
+          total: acumulado,
+          serie,
+          payback,
+          kwpReal,
+          paineis,
+          investimento,
+          minimo,
+          contaAcumulada,
+          co2: geracaoAnualMWh * 0.08 * ANOS,
+        };
+      }
+
+      /* RENDER */
+      function render() {
+        const r = calcular();
+
+        const rotulos = {
+          mes: "Você deixa de gastar por mês",
+          ano: "Você deixa de gastar por ano",
+          vida: "Você deixa de gastar em 25 anos",
+        };
+        const valores = {
+          mes: r.economiaMes,
+          ano: r.economiaAno,
+          vida: r.total,
+        };
+        document.getElementById("resRot").textContent = rotulos[estado.periodo];
+        document.getElementById("economia").textContent = brl(
+          valores[estado.periodo],
+        );
+
+        const pct = Math.round((r.economiaMes / estado.conta) * 100);
+        const notas = {
+          mes: `Cerca de ${pct}% da sua conta. Sobram ${brl(r.minimo)} de custo de disponibilidade, que a concessionária cobra de todo mundo.`,
+          ano: `O equivalente a ${Math.round(r.economiaAno / estado.conta)} contas de luz que você não paga mais, todo ano.`,
+          vida: `Já descontado o investimento de ${brl(r.investimento)}, sobram ${brl(r.total - r.investimento)} no seu bolso.`,
+        };
+        document.getElementById("economiaNota").textContent =
+          notas[estado.periodo];
+
+        document.getElementById("rSistema").innerHTML =
+          `${num(r.kwpReal, 2)} <i>kWp</i>`;
+        document.getElementById("rPaineis").innerHTML = `${r.paineis} <i>un.</i>`;
+        document.getElementById("rInvest").textContent = brl(r.investimento);
+        let anos = Math.floor(r.payback),
+          meses = Math.round((r.payback - anos) * 12);
+        if (meses === 12) {
+          anos += 1;
+          meses = 0;
+        }
+        document.getElementById("rPayback").innerHTML = r.payback
+          ? `${anos}<i>a</i> ${meses}<i>m</i>`
+          : "—";
+
+        document.getElementById("comparaSem").textContent = brl(r.contaAcumulada);
+        document.getElementById("comparaCom").textContent = brl(r.investimento);
+        document.getElementById("comparaDif").textContent = brl(
+          r.total - r.investimento,
+        );
+        document.getElementById("comparaCo2").textContent = `${num(r.co2, 1)} t`;
+
+        desenharGrafico(r);
+        document.getElementById("grafNota").textContent = r.payback
+          ? `retorno no ano ${anos + (meses > 0 ? 1 : 0)}`
+          : "economia acumulada";
+      }
+
+      function desenharGrafico(r) {
+        const svg = document.getElementById("grafico");
+        const L = 8,
+          T = 14,
+          W = 640,
+          H = 210,
+          base = H - 26;
+        const max = Math.max(r.serie[ANOS - 1], r.investimento) * 1.05;
+        const larg = (W - L * 2) / ANOS;
+        const yInvest = base - (r.investimento / max) * (base - T);
+
+        let barras = "";
+        r.serie.forEach((v, i) => {
+          const h = (v / max) * (base - T);
+          const x = L + i * larg;
+          const pago = r.payback !== null && i + 1 > r.payback;
+          barras += `<rect x="${x + 1.5}" y="${base - h}" width="${larg - 3}" height="${h}" rx="2" fill="${pago ? "#F26B21" : "#2F86D8"}"/>`;
+        });
+
+        const marcas = [1, 5, 10, 15, 20, 25]
+          .map((a) => {
+            const x = L + (a - 0.5) * larg;
+            return `<text x="${x}" y="${H - 8}" fill="#8FA3BB" font-family="Archivo, sans-serif" font-size="10" text-anchor="middle">${a}</text>`;
+          })
+          .join("");
+
+        const xPay = r.payback !== null ? L + r.payback * larg : null;
+        const linhaPay =
+          xPay !== null
+            ? `<line x1="${xPay}" y1="${T - 6}" x2="${xPay}" y2="${base}" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2 4" opacity=".5"/>`
+            : "";
+
+        svg.innerHTML = `
+          <title id="grafTitulo">Economia acumulada ano a ano comparada ao valor investido</title>
+          ${barras}
+          <line x1="${L}" y1="${base}" x2="${W - L}" y2="${base}" stroke="#1E4471" stroke-width="1"/>
+          ${linhaPay}
+          <line x1="${L}" y1="${yInvest}" x2="${W - L}" y2="${yInvest}" stroke="#FFC01E" stroke-width="1.5" stroke-dasharray="5 5"/>
+          <text x="${W - L}" y="${yInvest - 7}" fill="#FFC01E" font-family="Archivo, sans-serif" font-size="10" text-anchor="end">investimento ${brl(r.investimento)}</text>
+          ${marcas}`;
+      }
+
+      /* CONTROLES DO SIMULADOR */
+      const contaNum = document.getElementById("contaNum");
+      const contaRange = document.getElementById("contaRange");
+
+      function pintarRange() {
+        const p =
+          ((contaRange.value - contaRange.min) /
+            (contaRange.max - contaRange.min)) *
+          100;
+        contaRange.style.setProperty("--pct", p + "%");
+      }
+
+      contaRange.addEventListener("input", () => {
+        estado.conta = +contaRange.value;
+        contaNum.value = estado.conta;
+        pintarRange();
+        render();
+      });
+
+      contaNum.addEventListener("input", () => {
+        const v = Math.min(Math.max(+contaNum.value || 0, 0), 50000);
+        estado.conta = v;
+        contaRange.value = Math.min(
+          Math.max(v, +contaRange.min),
+          +contaRange.max,
+        );
+        pintarRange();
+        if (v >= 100) render();
+      });
+      contaNum.addEventListener("blur", () => {
+        if (estado.conta < 100) {
+          estado.conta = 100;
+          contaNum.value = 100;
+          contaRange.value = 150;
+          pintarRange();
+          render();
+        }
+      });
+
+      function grupo(attr, chave) {
+        document.querySelectorAll(`[${attr}]`).forEach((b) =>
+          b.addEventListener("click", () => {
+            document
+              .querySelectorAll(`[${attr}]`)
+              .forEach((x) => x.setAttribute("aria-pressed", "false"));
+            b.setAttribute("aria-pressed", "true");
+            estado[chave] = b.dataset[chave];
+            render();
+          }),
+        );
+      }
+      grupo("data-imovel", "imovel");
+      grupo("data-ligacao", "ligacao");
+      grupo("data-periodo", "periodo");
+
+      /* Levar valores para o formulário */
+      document.getElementById("btnLevar").addEventListener("click", () => {
+        const mapa = {
+          residencia: "Residência",
+          empresa: "Empresa",
+          rural: "Propriedade rural",
+        };
+        document.getElementById("fConta").value = brl(estado.conta);
+        document.getElementById("fTipo").value = mapa[estado.imovel];
+        document.getElementById("contato").scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => document.getElementById("fNome").focus(), 600);
+      });
+
+      /* FORMULÁRIO */
+      document.getElementById("formOrcamento").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const f = e.target;
+        const nota = document.getElementById("formNota");
+
+        if (!f.checkValidity()) {
+          nota.textContent =
+            "Preencha nome, WhatsApp, cidade e marque a autorização de contato.";
+          nota.style.color = "#D4550F";
+          const faltando = f.querySelector(":invalid");
+          if (faltando) faltando.focus();
+          return;
+        }
+
+        const r = calcular();
+        const texto =
+          `Olá! Quero um orçamento de energia solar.\n\n` +
+          `Nome: ${f.nome.value}\n` +
+          `Cidade: ${f.cidade.value}\n` +
+          `Tipo de imóvel: ${f.tipo.value}\n` +
+          `Conta de luz: ${f.conta.value || brl(estado.conta)}\n` +
+          `Simulação do site: usina de ${num(r.kwpReal, 2)} kWp (${r.paineis} painéis), ` +
+          `economia de ${brl(r.economiaMes)} por mês\n` +
+          (f.mensagem.value ? `\nObservações: ${f.mensagem.value}\n` : "") +
+          `\nWhatsApp para contato: ${f.zap.value}`;
+
+        window.open(
+          `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`,
+          "_blank",
+          "noopener",
+        );
+        nota.textContent =
+          "Mensagem aberta no WhatsApp. Se não abrir, chame direto pelo botão verde.";
+        nota.style.color = "#14508F";
+      });
+
+      /* CABEÇALHO FIXO */
+      (function () {
+        const topo = document.getElementById("topo");
+        const hero = document.getElementById("inicio");
+        function conferir() {
+          const limite = hero.offsetHeight * 0.35;
+          topo.classList.toggle("fixo", window.scrollY > limite);
+        }
+        window.addEventListener("scroll", conferir, { passive: true });
+        conferir();
+      })();
+
+      /* MENU MÓVEL */
+      (function () {
+        const gaveta = document.getElementById("gaveta");
+        const abrir = document.getElementById("abrirMenu");
+        const fechar = document.getElementById("fecharMenu");
+        function alternar(on) {
+          gaveta.classList.toggle("aberta", on);
+          abrir.setAttribute("aria-expanded", on ? "true" : "false");
+          document.body.style.overflow = on ? "hidden" : "";
+        }
+        abrir.addEventListener("click", () => alternar(true));
+        fechar.addEventListener("click", () => alternar(false));
+        gaveta.querySelectorAll("a").forEach((a) =>
+          a.addEventListener("click", () => alternar(false)),
+        );
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") alternar(false);
+        });
+      })();
+
+      /* ETAPAS */
+      (function () {
+        const grade = document.querySelector(".trilha-grid");
+        if (!grade) return;
+        const etapas = Array.from(grade.querySelectorAll(".etapa"));
+        const reduzir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function acender() {
+          grade.classList.add("andando");
+          etapas.forEach((e, i) => {
+            if (reduzir) {
+              e.classList.add("aceso");
+              return;
+            }
+            setTimeout(() => e.classList.add("aceso"), 250 + i * 620);
+          });
+        }
+
+        if ("IntersectionObserver" in window) {
+          const obs = new IntersectionObserver(
+            (entradas) => {
+              entradas.forEach((en) => {
+                if (en.isIntersecting) {
+                  acender();
+                  obs.disconnect();
+                }
+              });
+            },
+            { threshold: 0.35 },
+          );
+          obs.observe(grade);
+        } else {
+          acender();
+        }
+      })();
+
+      /* CARROSSEL */
+      (function () {
+        const esteira = document.getElementById("esteira");
+        if (!esteira) return;
+        const anterior = document.getElementById("projAnterior");
+        const proximo = document.getElementById("projProximo");
+
+        function passo() {
+          const card = esteira.querySelector(".proj");
+          return card ? card.offsetWidth + 18 : 320;
+        }
+        function atualizar() {
+          const fim = esteira.scrollWidth - esteira.clientWidth - 4;
+          anterior.disabled = esteira.scrollLeft <= 4;
+          proximo.disabled = esteira.scrollLeft >= fim;
+        }
+        anterior.addEventListener("click", () =>
+          esteira.scrollBy({ left: -passo(), behavior: "smooth" }),
+        );
+        proximo.addEventListener("click", () =>
+          esteira.scrollBy({ left: passo(), behavior: "smooth" }),
+        );
+        esteira.addEventListener("scroll", atualizar, { passive: true });
+        window.addEventListener("resize", atualizar);
+        atualizar();
+
+        /* arrastar com o mouse */
+        let baixo = false,
+          inicioX = 0,
+          inicioScroll = 0,
+          moveu = false;
+        esteira.addEventListener("mousedown", (e) => {
+          baixo = true;
+          moveu = false;
+          inicioX = e.pageX;
+          inicioScroll = esteira.scrollLeft;
+        });
+        window.addEventListener("mouseup", () => {
+          if (baixo) esteira.classList.remove("arrastando");
+          baixo = false;
+        });
+        esteira.addEventListener("mousemove", (e) => {
+          if (!baixo) return;
+          const d = e.pageX - inicioX;
+          if (!moveu && Math.abs(d) > 4) {
+            moveu = true;
+            esteira.classList.add("arrastando");
+          }
+          if (moveu) {
+            e.preventDefault();
+            esteira.scrollLeft = inicioScroll - d;
+          }
+        });
+
+        /* setas do teclado */
+        esteira.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight") {
+            e.preventDefault();
+            esteira.scrollBy({ left: passo(), behavior: "smooth" });
+          }
+          if (e.key === "ArrowLeft") {
+            e.preventDefault();
+            esteira.scrollBy({ left: -passo(), behavior: "smooth" });
+          }
+        });
+
+        esteira.querySelectorAll("img").forEach((img) => {
+          img.addEventListener("error", () => img.setAttribute("data-vazia", ""));
+          img.addEventListener("load", () => img.removeAttribute("data-vazia"));
+          if (img.complete && img.naturalWidth === 0)
+            img.setAttribute("data-vazia", "");
+        });
+      })();
+
+      /* REVELAÇÃO AO ROLAR */
+      (function () {
+        const reduzir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduzir && "IntersectionObserver" in window) {
+          const obs = new IntersectionObserver(
+            (entradas) => {
+              entradas.forEach((en) => {
+                if (en.isIntersecting) {
+                  en.target.classList.add("vis");
+                  obs.unobserve(en.target);
+                }
+              });
+            },
+            { threshold: 0.12 },
+          );
+          document.querySelectorAll(".rev").forEach((el) => obs.observe(el));
+        } else {
+          document.querySelectorAll(".rev").forEach((el) => el.classList.add("vis"));
+        }
+      })();
+
+      document.getElementById("ano").textContent = new Date().getFullYear();
+      pintarRange();
+      render();
+    </script>
+  </body>
+</html>
