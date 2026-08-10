@@ -552,6 +552,21 @@
         color: #8a97a6;
         margin-top: 8px;
       }
+      .campo-dica {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: 10px;
+        font-size: 0.82rem;
+        line-height: 1.35;
+        color: #6b7684;
+      }
+      .campo-dica svg {
+        flex: none;
+        width: 15px;
+        height: 15px;
+        stroke: var(--laranja);
+      }
 
       .chips {
         display: grid;
@@ -1685,8 +1700,13 @@
             </div>
             <div class="hero-nums">
               <div><b>+40</b><span>projetos instalados</span></div>
-              <div><b>25 anos</b><span>de garantia nos painéis</span></div>
-              <div><b>1 a 3 dias</b><span>de instalação</span></div>
+              <div>
+                <b>25 a 30 anos</b><span>de garantia de geração</span>
+              </div>
+              <div>
+                <b>15 anos</b><span>de garantia de fábrica nos materiais</span>
+              </div>
+              <div><b>1 ano</b><span>de garantia no serviço</span></div>
             </div>
           </div>
 
@@ -1708,7 +1728,7 @@
                   max="50000"
                   step="10"
                   value="450"
-                  aria-describedby="contaAjuda"
+                  aria-describedby="contaAjuda contaDica"
                 />
               </div>
               <input
@@ -1723,6 +1743,23 @@
               <div class="escala" id="contaAjuda">
                 <span>R$ 150</span><span>R$ 3.000+</span>
               </div>
+              <p class="campo-dica" id="contaDica">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                </svg>
+                <span
+                  >Não precisa usar a barra: digite o valor exato da sua conta
+                  no campo acima. Aceita de R$ 100 a R$ 50.000.</span
+                >
+              </p>
             </div>
 
             <div class="campo">
