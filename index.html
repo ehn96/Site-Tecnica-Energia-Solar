@@ -136,6 +136,9 @@
       .rotulo.claro {
         color: var(--ambar);
       }
+      .ambar {
+        color: var(--ambar);
+      }
       .lead {
         font-size: 1.08rem;
         color: var(--cinza);
@@ -1310,21 +1313,15 @@
 
       .bateria-fotos {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
       }
       .bateria-foto {
         position: relative;
         margin: 0;
         border-radius: var(--r-md);
         overflow: hidden;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 1 / 1;
         background: rgba(255, 255, 255, 0.04);
         border: 1px dashed rgba(255, 255, 255, 0.24);
-      }
-      .bateria-foto:first-child {
-        grid-column: 1 / -1;
-        aspect-ratio: 16 / 10;
       }
       .bateria-foto img {
         position: absolute;
@@ -1361,11 +1358,6 @@
       }
       .bateria-foto:has(img:not([data-vazia])) .bateria-vaga {
         display: none;
-      }
-      @media (max-width: 520px) {
-        .bateria-foto:first-child {
-          aspect-ratio: 4 / 3;
-        }
       }
 
       /* SOBRE */
@@ -1883,7 +1875,7 @@
               >
             </div>
             <div class="hero-nums">
-              <div><b>+40</b><span>projetos instalados</span></div>
+              <div><b>+180</b><span>projetos instalados</span></div>
               <div><b>25 a 30 anos</b><span>de garantia de geração</span></div>
               <div>
                 <b>15 anos</b><span>de garantia de fábrica nos materiais</span>
@@ -2089,15 +2081,13 @@
         <div class="wrap dor-grid">
           <div class="rev">
             <p class="rotulo claro">O problema</p>
-            <h2>Se você paga conta de luz, você já tem como ter sua usina.</h2>
+            <h2>
+              Se você já paga a conta de luz, você já tem condições de ter sua
+              própria <em class="ambar">usina solar</em>.
+            </h2>
             <p class="lead">
-              Quem paga luz todo mês já provou que consegue pagar por energia. A
-              diferença é que hoje esse dinheiro sai e some, e no mês seguinte
-              começa de novo. A usina solar usa o mesmo valor para outra coisa:
-              em vez de quitar a conta da distribuidora, ele constrói um
-              equipamento seu, no seu telhado, gerando por mais de duas décadas.
-              A gente te mostra como encaixar isso sem virar seu planejamento
-              mensal de cabeça para baixo.
+              Sem pesar no seu orçamento mensal. Chama a gente no WhatsApp e te
+              mostramos como.
             </p>
             <ul class="dor-lista">
               <li>
@@ -2627,6 +2617,672 @@
                   /></svg
               ></span>
             </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-09.jpg"
+                alt="Usina em solo em terreno rural pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-10.jpg"
+                alt="Sala técnica com inversores solares instalados pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-11.jpg"
+                alt="Abrigo de inversores ao pôr do sol pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-12.jpg"
+                alt="Usina em telhado metálico residencial pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-13.jpg"
+                alt="Usina em solo sobre blocos de concreto pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-14.jpg"
+                alt="Placas solares em telhado de telha colonial branca pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-15.jpg"
+                alt="Usina em solo em terreno inclinado pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-16.jpg"
+                alt="Abrigo de inversor solar em instalação rural pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-17.jpg"
+                alt="Usina em solo vista do alto pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-18.jpg"
+                alt="Usina em telhado residencial urbano pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-19.jpg"
+                alt="Usina em telhado industrial pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-20.jpg"
+                alt="Usina em telhado metálico de galpão rural pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-21.jpg"
+                alt="Usina em cobertura de galpão industrial pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-22.jpg"
+                alt="Usina em solo junto à vegetação nativa pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-23.jpg"
+                alt="Usina em solo vista aérea ao entardecer pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-24.jpg"
+                alt="Usina em solo em propriedade rural com pasto pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-25.jpg"
+                alt="Usina em solo às margens de via pública pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-26.jpg"
+                alt="Usina em solo com vista para as montanhas pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-27.jpg"
+                alt="Detalhe de painéis solares em solo pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-28.jpg"
+                alt="Usina em solo com manutenção em andamento pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-29.jpg"
+                alt="Usina em solo em dia nublado pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-30.jpg"
+                alt="Usina em solo junto a galpão industrial pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-31.jpg"
+                alt="Usina em solo com painéis inclinados pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-32.jpg"
+                alt="Usina em solo em área gramada pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-33.jpg"
+                alt="Usina em solo em área de mata pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-34.jpg"
+                alt="Usina em telhado de fibrocimento pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-35.jpg"
+                alt="Usina em solo em vale entre montanhas pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-36.jpg"
+                alt="Usina em solo com abrigo de inversor pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-37.jpg"
+                alt="Usina em telhado metálico azul pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-38.jpg"
+                alt="Usina em cobertura de prédio público pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-39.jpg"
+                alt="Usina em cobertura curva de ginásio pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-40.jpg"
+                alt="Usina em telhado de galpão comercial em instalação pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-41.jpg"
+                alt="Usina em solo com vista para plantação pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-42.jpg"
+                alt="Usina em solo de grande porte pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-43.jpg"
+                alt="Usina em solo próxima a residência rural pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-44.jpg"
+                alt="Usina em solo em área de pasto pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
+            <figure class="proj">
+              <img
+                src="imagens/projeto-45.jpg"
+                alt="Usina em cobertura de prédio histórico pela Técnica Energia Solar"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="proj-marca" aria-hidden="true"
+                ><svg width="70" height="70" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="4.2" fill="#FFC01E" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                    stroke="#FFC01E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </figure>
           </div>
 
           <div class="esteira-puxe" aria-hidden="true">
@@ -2758,8 +3414,8 @@
           <div class="bateria-fotos rev">
             <figure class="bateria-foto">
               <img
-                src="imagens/bateria-01.jpg"
-                alt="Bateria portátil da Técnica Energia Solar em uso"
+                src="imagens/bateria-01.png"
+                alt="Estação de energia portátil com painel solar dobrável"
                 loading="lazy"
                 decoding="async"
               />
@@ -2786,62 +3442,6 @@
                   />
                 </svg>
                 <span>Foto do equipamento</span>
-              </div>
-            </figure>
-            <figure class="bateria-foto">
-              <img
-                src="imagens/bateria-02.jpg"
-                alt="Bateria portátil alimentando equipamentos fora da rede elétrica"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="bateria-vaga" aria-hidden="true">
-                <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
-                  <rect
-                    x="2"
-                    y="7"
-                    width="17"
-                    height="10"
-                    rx="2.4"
-                    stroke="#4d6784"
-                    stroke-width="1.6"
-                  />
-                  <path
-                    d="M22 10.5v3"
-                    stroke="#4d6784"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>Foto do cliente</span>
-              </div>
-            </figure>
-            <figure class="bateria-foto">
-              <img
-                src="imagens/bateria-03.jpg"
-                alt="Painel solar portátil carregando bateria em campo"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="bateria-vaga" aria-hidden="true">
-                <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
-                  <rect
-                    x="2"
-                    y="7"
-                    width="17"
-                    height="10"
-                    rx="2.4"
-                    stroke="#4d6784"
-                    stroke-width="1.6"
-                  />
-                  <path
-                    d="M22 10.5v3"
-                    stroke="#4d6784"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>Foto do cliente</span>
               </div>
             </figure>
           </div>
