@@ -413,6 +413,23 @@
         color: #c8d3e0;
         max-width: 52ch;
         margin: 24px 0 34px;
+        text-wrap: pretty;
+        text-wrap: balance;
+      }
+      .hero-sub + .hero-sub {
+        margin: -18px 0 34px;
+      }
+      .hero-novidade {
+        max-width: none;
+        text-wrap: pretty;
+      }
+      .hero-novidade b {
+        color: var(--ambar);
+        font-weight: 700;
+      }
+      .hero-chamada {
+        color: var(--ambar);
+        font-style: italic;
       }
       .abaixo {
         display: none;
@@ -1206,6 +1223,151 @@
         display: none;
       }
 
+      /* BATERIAS */
+      .bateria {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(200deg, #0c2c4d 0%, var(--noite-3) 100%);
+        color: #fff;
+      }
+      .bateria::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.6;
+        background: radial-gradient(
+          620px 330px at 86% -6%,
+          rgba(255, 192, 30, 0.2),
+          transparent 62%
+        );
+      }
+      .bateria .wrap {
+        position: relative;
+      }
+      .bateria h2 {
+        color: #fff;
+      }
+      .bateria h2 em {
+        font-style: normal;
+        color: var(--ambar);
+      }
+      .bateria .lead {
+        color: #b6c4d4;
+      }
+      .bateria-grid {
+        display: grid;
+        grid-template-columns: 1.02fr 0.98fr;
+        gap: clamp(34px, 5vw, 70px);
+        align-items: center;
+      }
+      @media (max-width: 980px) {
+        .bateria-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .usos {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0 32px;
+        display: grid;
+        gap: 18px;
+      }
+      .usos li {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .usos i {
+        flex: none;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        display: grid;
+        place-items: center;
+      }
+      .usos b {
+        display: block;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 1rem;
+        color: #fff;
+        margin-bottom: 3px;
+      }
+      .usos span {
+        display: block;
+        color: #b6c4d4;
+        font-size: 0.96rem;
+        line-height: 1.5;
+      }
+      .bateria-nota {
+        font-size: 0.9rem;
+        color: #7f95ae;
+        margin: 18px 0 0;
+      }
+
+      .bateria-fotos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .bateria-foto {
+        position: relative;
+        margin: 0;
+        border-radius: var(--r-md);
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px dashed rgba(255, 255, 255, 0.24);
+      }
+      .bateria-foto:first-child {
+        grid-column: 1 / -1;
+        aspect-ratio: 16 / 10;
+      }
+      .bateria-foto img {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .bateria-foto img[data-vazia] {
+        opacity: 0;
+      }
+      .bateria-vaga {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        align-content: center;
+        gap: 10px;
+        padding: 16px;
+        text-align: center;
+      }
+      .bateria-vaga span {
+        font-family: var(--display);
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #7f95ae;
+      }
+      .bateria-foto:has(img:not([data-vazia])) {
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.14);
+      }
+      .bateria-foto:has(img:not([data-vazia])) .bateria-vaga {
+        display: none;
+      }
+      @media (max-width: 520px) {
+        .bateria-foto:first-child {
+          aspect-ratio: 4 / 3;
+        }
+      }
+
       /* SOBRE */
       .empresa-grid {
         display: grid;
@@ -1656,6 +1818,7 @@
           <a href="#servicos">Serviços</a>
           <a href="#como-funciona">Como funciona</a>
           <a href="#projetos">Projetos</a>
+          <a href="#baterias">Baterias</a>
           <a href="#sobre">Sobre</a>
         </nav>
         <a class="btn btn-laranja" href="#contato">Pedir orçamento</a>
@@ -1684,6 +1847,7 @@
       <a href="#servicos">Serviços</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#projetos">Projetos</a>
+      <a href="#baterias">Baterias</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </div>
@@ -1693,18 +1857,24 @@
         <div class="wrap hero-in">
           <div class="hero-copy">
             <p class="rotulo claro">
-              Energia solar para casa, comércio e campo
+              Energia solar para casa, comércio e propriedades rurais.
             </p>
             <h1>
               Sua conta de luz já pagou um sistema solar.
               <em>Só que não foi o seu.</em>
             </h1>
+
             <p class="hero-sub">
               Projetamos, instalamos e homologamos energia solar para casas,
-              comércios e propriedades rurais. Coloque o valor da sua conta
-              <span class="ao-lado">ao lado</span
-              ><span class="abaixo">abaixo</span>
-              e veja quanto dinheiro fica com você.
+              comércios e propriedades rurais.
+            </p>
+
+            <p class="hero-sub hero-novidade">
+              <b>Novidade:</b> conheça nossos kits com bateria, feitos para
+              lugares onde a energia da rede não chega.
+            </p>
+            <p class="hero-sub hero-chamada">
+              Coloque o valor da sua conta e veja quanto dinheiro fica com você.
             </p>
             <div class="hero-acoes">
               <a class="btn btn-laranja" href="#contato">Quero meu orçamento</a>
@@ -1919,13 +2089,15 @@
         <div class="wrap dor-grid">
           <div class="rev">
             <p class="rotulo claro">O problema</p>
-            <h2>Se você já paga luz todo mês, já tem como gerar a sua.</h2>
+            <h2>Se você paga conta de luz, você já tem como ter sua usina.</h2>
             <p class="lead">
-              A conta de energia é a única despesa que sobe todo ano e nunca
-              vira patrimônio. O dinheiro sai, some, e no mês seguinte começa de
-              novo. Uma usina solar quebra esse ciclo: o mesmo valor que ia
-              embora vira um equipamento no seu telhado, gerando por mais de
-              duas décadas.
+              Quem paga luz todo mês já provou que consegue pagar por energia. A
+              diferença é que hoje esse dinheiro sai e some, e no mês seguinte
+              começa de novo. A usina solar usa o mesmo valor para outra coisa:
+              em vez de quitar a conta da distribuidora, ele constrói um
+              equipamento seu, no seu telhado, gerando por mais de duas décadas.
+              A gente te mostra como encaixar isso sem virar seu planejamento
+              mensal de cabeça para baixo.
             </p>
             <ul class="dor-lista">
               <li>
@@ -1988,11 +2160,47 @@
                   />
                 </svg>
                 <span
+                  >A parcela do sistema entra no lugar do valor que já sai da
+                  sua conta todo mês. A diferença é que ela termina — a conta de
+                  luz, não.</span
+                >
+              </li>
+              <li>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M10 17V3M4 11l6 6 6-6"
+                    stroke="#4FD6A0"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+                <span
                   >Com geração própria sobra apenas o custo de disponibilidade e
                   a iluminação pública. O resto fica com você.</span
                 >
               </li>
             </ul>
+
+            <div class="hero-acoes" style="margin: 28px 0 0">
+              <a
+                class="btn btn-laranja"
+                href="https://wa.me/5531995917494?text=Ol%C3%A1%2C%20pago%20conta%20de%20luz%20todo%20m%C3%AAs%20e%20quero%20saber%20como%20cabe%20no%20meu%20or%C3%A7amento%20instalar%20minha%20usina%20solar."
+                target="_blank"
+                rel="noopener"
+                >Ver como cabe no meu bolso</a
+              >
+            </div>
+            <p class="aviso">
+              Chamada direta no WhatsApp com quem faz o projeto. Sem
+              compromisso, sem robô.
+            </p>
           </div>
 
           <div class="painel rev">
@@ -2433,6 +2641,209 @@
                 />
               </svg>
             </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec bateria" id="baterias">
+        <div class="wrap bateria-grid">
+          <div class="rev">
+            <p class="rotulo claro">Baterias e energia portátil</p>
+            <h2>Ficou sem energia? <em>Podemos te ajudar.</em></h2>
+            <p class="lead">
+              Nem todo lugar tem poste na frente. Sítio, chácara, obra, barraca
+              de feira: com painel e bateria você tem tomada funcionando onde
+              antes só existia gerador a combustível, barulho e cheiro de óleo.
+            </p>
+            <p class="lead">
+              A bateria carrega no sol durante o dia e devolve a energia na hora
+              que você precisar. Sem puxar rede nova, sem obra e sem depender de
+              ninguém religar o poste.
+            </p>
+
+            <ul class="usos">
+              <li>
+                <i>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3 20h18M6 20V9l6-5 6 5v11"
+                      stroke="#FFC01E"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </i>
+                <div>
+                  <b>Sítio, chácara e área rural</b>
+                  <span
+                    >Iluminação, bomba d'água e tomadas em lugar que a rede
+                    elétrica não alcança.</span
+                  >
+                </div>
+              </li>
+              <li>
+                <i>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M4 20V10h16v10M2 20h20M8 10V6h8v4"
+                      stroke="#FFC01E"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </i>
+                <div>
+                  <b>Obra, feira e food truck</b>
+                  <span
+                    >Ferramenta ligada e ponto de luz onde não existe tomada
+                    disponível.</span
+                  >
+                </div>
+              </li>
+              <li>
+                <i>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 3L3 20h18L12 3z"
+                      stroke="#FFC01E"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </i>
+                <div>
+                  <b>Camping, pesca e trailer</b>
+                  <span
+                    >Celular, lanterna, caixa de som e equipamentos carregados
+                    longe de qualquer poste.</span
+                  >
+                </div>
+              </li>
+              <li>
+                <i>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"
+                      stroke="#FFC01E"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </i>
+                <div>
+                  <b>Quando a luz cai</b>
+                  <span
+                    >O que é essencial continua ligado até a energia voltar, em
+                    silêncio e sem fumaça.</span
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <div class="hero-acoes">
+              <a
+                class="btn btn-laranja"
+                href="https://wa.me/5531995917494?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20bateria%20e%20energia%20port%C3%A1til."
+                target="_blank"
+                rel="noopener"
+                >Falar sobre bateria</a
+              >
+            </div>
+            <p class="bateria-nota">
+              Indicamos o tamanho da bateria conforme o que você precisa manter
+              ligado e por quanto tempo.
+            </p>
+          </div>
+
+          <div class="bateria-fotos rev">
+            <figure class="bateria-foto">
+              <img
+                src="imagens/bateria-01.jpg"
+                alt="Bateria portátil da Técnica Energia Solar em uso"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="bateria-vaga" aria-hidden="true">
+                <svg width="46" height="46" viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="2"
+                    y="7"
+                    width="17"
+                    height="10"
+                    rx="2.4"
+                    stroke="#4d6784"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M22 10.5v3"
+                    stroke="#4d6784"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M11.6 9.2L8.6 13h2.6l-.5 3 3.2-4.2h-2.6l.3-2.6z"
+                    fill="#FFC01E"
+                  />
+                </svg>
+                <span>Foto do equipamento</span>
+              </div>
+            </figure>
+            <figure class="bateria-foto">
+              <img
+                src="imagens/bateria-02.jpg"
+                alt="Bateria portátil alimentando equipamentos fora da rede elétrica"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="bateria-vaga" aria-hidden="true">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="2"
+                    y="7"
+                    width="17"
+                    height="10"
+                    rx="2.4"
+                    stroke="#4d6784"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M22 10.5v3"
+                    stroke="#4d6784"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Foto do cliente</span>
+              </div>
+            </figure>
+            <figure class="bateria-foto">
+              <img
+                src="imagens/bateria-03.jpg"
+                alt="Painel solar portátil carregando bateria em campo"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="bateria-vaga" aria-hidden="true">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="2"
+                    y="7"
+                    width="17"
+                    height="10"
+                    rx="2.4"
+                    stroke="#4d6784"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M22 10.5v3"
+                    stroke="#4d6784"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Foto do cliente</span>
+              </div>
+            </figure>
           </div>
         </div>
       </section>
@@ -3354,6 +3765,17 @@
         });
 
         esteira.querySelectorAll("img").forEach((img) => {
+          img.addEventListener("error", () =>
+            img.setAttribute("data-vazia", ""),
+          );
+          img.addEventListener("load", () => img.removeAttribute("data-vazia"));
+          if (img.complete && img.naturalWidth === 0)
+            img.setAttribute("data-vazia", "");
+        });
+      })();
+
+      (function () {
+        document.querySelectorAll(".bateria-foto img").forEach((img) => {
           img.addEventListener("error", () =>
             img.setAttribute("data-vazia", ""),
           );
