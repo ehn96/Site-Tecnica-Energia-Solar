@@ -485,6 +485,29 @@
         }
       }
 
+      /* MOBILE: sem botoes na hero, simulador logo apos a chamada e
+         numeros/garantias abaixo do simulador */
+      @media (max-width: 720px) {
+        .hero-in {
+          padding-top: 140px;
+        }
+        .hero-copy {
+          display: contents;
+        }
+        .hero .hero-acoes {
+          display: none;
+        }
+        .hero-sub + .hero-chamada {
+          margin-bottom: 0;
+        }
+        .hero-in .calc {
+          order: 1;
+        }
+        .hero-in .hero-nums {
+          order: 2;
+        }
+      }
+
       /* SIMULADOR */
       .calc {
         background: var(--branco);
@@ -1852,8 +1875,9 @@
               Energia solar para casa, comércio e propriedades rurais.
             </p>
             <h1>
-              Sua conta de luz já pagou um sistema solar.
-              <em>Só que não foi o seu.</em>
+              Sua conta de luz já pagou um sistema solar. <br />Só que não foi o
+              seu.
+              <em> Vamos resolver isso agora!</em>
             </h1>
 
             <p class="hero-sub">
@@ -1866,7 +1890,8 @@
               lugares onde a energia da rede não chega.
             </p>
             <p class="hero-sub hero-chamada">
-              Coloque o valor da sua conta e veja quanto dinheiro fica com você.
+              Arraste o cursor para a direita ou esquerda, indicando o valor da
+              sua conta e veja quanto dinheiro fica no seu bolso.
             </p>
             <div class="hero-acoes">
               <a class="btn btn-laranja" href="#contato">Quero meu orçamento</a>
